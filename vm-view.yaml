@@ -554,13 +554,13 @@ spec:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "(avg by (resource,project) (rate(ceilometer_network_incoming_bytes_rate{project=\"$project\"}[5m])))",
+              "expr": "(avg by (resource,project) (rate(ceilometer_network_incoming_bytes{project=\"$project\"}[5m])))",
               "interval": "",
               "legendFormat": "Rx {{ resource }} interface {{ type_instance }}",
               "refId": "A"
             },
             {
-              "expr": "(avg by (resource,project) (rate(ceilometer_network_outgoing_bytes_rate{project=\"$project\"}[5m])))",
+              "expr": "(avg by (resource,project) (rate(ceilometer_network_outgoing_bytes{project=\"$project\"}[5m])))",
               "interval": "",
               "legendFormat": "Tx {{ resource }} interface {{ type_instance }}",
               "refId": "B"
@@ -764,13 +764,13 @@ spec:
           "steppedLine": false,
           "targets": [
             {
-              "expr": "(avg by (resource,project) (rate(ceilometer_disk_read_bytes_rate{project=\"$project\"}[5m])))",
+              "expr": "(avg by (resource,project) (rate(ceilometer_disk_device_read_bytes{project=\"$project\"}[5m])))",
               "interval": "",
               "legendFormat": "Read {{ resource }} disk {{ type_instance }}",
               "refId": "A"
             },
             {
-              "expr": "(avg by (resource,project) (rate(ceilometer_disk_write_bytes_rate{project=\"$project\"}[5m])))",
+              "expr": "(avg by (resource,project) (rate(ceilometer_disk_device_write_bytes{project=\"$project\"}[5m])))",
               "interval": "",
               "legendFormat": "Write {{ resource }} disk {{ type_instance }}",
               "refId": "B"
